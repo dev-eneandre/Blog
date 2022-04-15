@@ -1,0 +1,60 @@
+.hr__About{
+    padding: 30px 35px;
+}
+.hr__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.hr__text, .hr__title2{
+    font-family: Oranienbaum;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.9em;
+    text-transform: none;
+    color: #050000;
+    padding-top: 15px;
+}
+.section2{
+    flex: 1;
+    padding: 0px 25px;
+}
+.hr__section2{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Abt__ImgWrap{
+    margin-top: 30px;
+    padding: 0px 30px;
+    box-shadow: 5px 5px 4px #888;
+}
+.Abt__Img{
+    width: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width : 768px){
+    .hr__About{
+        padding: 30px 35px;
+    }
+    .hr__title{
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .hr__title2{
+        font-size: 18px;
+    }
+    .hr__text{
+        font-size: 15px;
+    }
+    .subscribe_title{
+        text-align: center;
+    }
+}

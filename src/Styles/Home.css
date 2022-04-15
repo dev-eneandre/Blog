@@ -1,0 +1,132 @@
+.HomeHeader{
+    background-image: url("../Images/hayet+homepage+header.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+}   
+
+/* form  */
+.subscribe{
+    min-height: 210px;
+    font-family: Oranienbaum;
+
+    padding:  25px 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+.subscribe::before{
+    content: "";
+    left: 0;
+    bottom : 0;
+    width: 85vw;
+    height: 1px;
+    background-color: black;
+}
+.subscribe::after{
+    content: " ";
+    left: 0;
+    top : 0; 
+    position: relative;
+    width: 85vw;
+    height: 1px;
+    background-color: black;
+    z-index: -99;
+    
+}
+.subscribe > p{
+    color: #272727;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.2em;
+    text-transform: capitalize;
+    width: 300px;
+}
+.subscribeForm{
+    padding-left: 50px;
+}
+.subscribeForm > button, .subscribeForm > input{
+    height: auto;
+    padding: 1em 2.5em;
+    margin-top : 5px;
+    border-radius : 3px;
+}
+.subscribeForm > input{
+    margin-right: 3px;
+    outline: none;
+    border: 1px solid #938E91;
+}
+.subscribeForm > button{
+    background-color: #231f20;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    outline : none;
+    cursor: pointer;
+    color: #fff;
+}
+.subscribeForm > input::placeholder{
+    font-size: 11px;
+    letter-spacing : 1.1px;
+}
+
+/* catalogue   */
+.Cat__Catalogue{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 25px 20px 45px;
+}
+
+.catalogue__wrap{
+    width: 20vw;
+    cursor: pointer;
+}
+.catalogue__wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* zoom image out  */
+.zoomOut {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+    z-index : 9999;
+}
+@media screen and (max-width : 768px){
+    /* .HomeHeader{ */
+        /* min-height: 50vh */
+    /* } */
+    .subscribe > p{
+        font-size: 22px;
+    }   
+    .subscribeForm > button, .subscribeForm > input{
+        height: auto;
+        padding: 0.6em 1.5em;
+        margin-top : 8px;
+    }
+    .subscribeForm > button{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width : 400px){
+    .subscribe > p{
+       font-size: 18px; 
+    }
+    .subscribeForm > button, .subscribeForm > input{
+        height: auto;
+        padding: 0.4em 1em;
+        margin-top : 8px;
+        border-radius : 3px;
+    }
+    .subscribeForm > button{
+        font-size: 11px;
+    }
+}

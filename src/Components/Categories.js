@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "../Styles/Categories.css";
 
 function Categories() {
@@ -9,26 +10,27 @@ function Categories() {
             </div>
 
             <ul className="categ__list">
-                <li><a href='#'>FASHION </a>
+                <li>
+                    <Link to="/stories/fashion">FASHION</Link>
                     <ul className='dropdown'>
                         <li>item 1</li>
                         <li>item 1</li>
                         <li>item 1</li>
                     </ul>
                 </li>
-                <li><a href='#'>BEAUTY</a>
+                <li><Link to="/stories/beauty">BEAUTY</Link>
                 <ul className='dropdown'>
                         <li>item 1</li>
                         <li>item 1</li>
                     </ul>
                 </li>
-                <li><a href='#'>PLACES</a> 
+                <li><Link to="/stories/places">PLACES</Link>
                 </li>
-                <li><a href='#'>LIFESTYLE</a> 
+                <li><Link to="/stories/lifestyle">LIFESTYLE</Link>
                 </li>
-                <li><a href='#'>DECOR</a> 
+                <li><Link to="/stories/decor">DECOR</Link>
                 </li>
-                <li><a href='#'>PRESS</a> 
+                <li><Link to="/stories/press">PRESS</Link> 
                 </li>
                     
             </ul>

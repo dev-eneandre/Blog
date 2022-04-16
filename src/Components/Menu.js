@@ -78,6 +78,7 @@ const Menu = () => {
 
                 <div className="Navlinks">
                    <Link to="/" >Home</Link>
+                   <Link to="/stories" >Stories</Link>
                    <Link to="/about" >About</Link>
                    <Link to="/contact" >Contact</Link>
                  </div>

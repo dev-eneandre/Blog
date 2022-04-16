@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../Styles/Home.css";
+import Categories from './Categories';
 import Content from './Content';
 import Subscribe from './Subscribe';
 
@@ -22,6 +23,8 @@ function Home() {
 
     return (
         <div>
+            {/* <Categories /> */}
+            
             <div className="HomeHeader">
             </div>
 

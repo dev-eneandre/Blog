@@ -17,7 +17,7 @@ function Home() {
     ]);
 
     const ChangeZoomState = (index) => {
-        // console.log(index)
+    
         setImgZoom(!ImgZoom);
     }
 
@@ -41,7 +41,7 @@ function Home() {
             <div className="Cat__Catalogue">
                 {C__images.map(( ci, index ) => (
                     // <div className="catalogue__wrap" onClick={() => ChangeZoomState(index)}>
-                    <div className="catalogue__wrap">
+                    <div className="catalogue__wrap" key={index}>
                     <img src={ci.imgSrc} className={ImgZoom ? "zoomOut" : " "} alt="beauty tile" key={ImgZoom.imgSrc} />
                     </div>
                 ))}

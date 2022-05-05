@@ -25,7 +25,7 @@ function SelectedStory() {
       snapshot.docs.forEach((doc) => {
         story.push({...doc.data(), id : doc.id })
       })
-    console.log(story);
+    // console.log(story);
     setCurRead(story);
     })
    
@@ -38,6 +38,7 @@ function SelectedStory() {
           Image = {cr.ImageSrc}
           Title = {cr.title}
           Date={cr.date}
+          StoryBody={cr.StoryBody}
           key={index}
         
         />

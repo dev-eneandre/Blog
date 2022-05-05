@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../Styles/Home.css";
 import { db } from "../firebase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where, onSnapshot, updateDoc } from "firebase/firestore";
 
 
 
@@ -11,39 +11,34 @@ function Subscribe() {
     const [inputedEmail, setinputedEmail] = useState("");
     const [user, setUser] = useState([]);
     
-    // const [user, setUser] = useState([
-    //     { email: "tutu@gmail.com", id: "Stand Up to ur feetr"},
-    //     { email: "mart@gmail.com", id: "Only Jah fit do the rest"}
-    // ]);
+
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        let matcher = "";
-        const allSubscriptions = collection(db, "subscribelist");
-        
-        const AddDocuments =  async () => {
-        await addDoc(collection(db, "subscribelist"), {
-             email : inputedEmail
-         })
-        }
-    
-        try{
-         matcher = user.find((cb) => cb.email === inputedEmail).email;
-         console.log("from try and catch, the value was found");
-       }catch(error){
-           console.log("value was not found, please add values");
-
-            AddDocuments();
-       }
-
-       setinputedEmail("");
-
-        // matcher === inputedEmail ?
-        //  console.log("guy, the email already exists") :
-        //  console.log("you can add values to the db now")
       
-        
+        const colRef = collection(db, "subscribelist");
+
+        const q = query(colRef, where("email", "==", inputedEmail));
+        let users;
+        onSnapshot(q, (snapshot) => {
+            users = [];
+
+            snapshot.docs.forEach((doc) =>{
+                users.push({...doc.data(), id : doc.id})
+            })
+            console.log(users);
+//  TO BE updateDoc, LET THERE BE A WARNING TEXT 
+            if(users.length < 1){
+                console.log("less than 1...means zero ...means does not exist..means add values")
+                addDoc(collection(db, "subscribelist"), {
+                    email : inputedEmail
+                })
+       
+            }else{
+                console.log("value exissts");
+            }
+        })
+      
     }
 
     return (

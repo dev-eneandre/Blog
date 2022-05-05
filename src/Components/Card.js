@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Card( { imageSrc, storyDate, storyTitle, dynamicLink }) {
     return (
-        <Link to={dynamicLink}>
+        <Link to={dynamicLink} style={{ textDecoration: 'none' }}>
             <div className="story__card">
                 <div className="sc__img">
                     <img 

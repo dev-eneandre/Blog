@@ -15,10 +15,10 @@ import Decor from './Components/Decor';
 import Press from './Components/Press';
 import SelectedStory from './Components/SelectedStory';
 import ErrorPage from './Components/ErrorPage';
+import DifCategories from './Components/DifCategories';
 
 
 function App() {
-
 
   return (
     <Router>
@@ -28,14 +28,15 @@ function App() {
         <Routes>
 
             <Route path="/" element={<Home />} />
-            <Route path="stories" exact element={<MyStories />}>
-              <Route path="fashion" element={<Fashion />} />
-              <Route path="beauty" element={<Beauty />} />
-              <Route path="places" element={<Places />} />
-              <Route path="lifestyle" element={<Lifestyle />} />
-              <Route path="decor" element={<Decor />} />
-              <Route path="press" element={<Press />} />
-            </Route>
+            <Route path="stories" exact element={<MyStories />} />
+
+              <Route path="/categories/fashion" element={<Fashion />} />
+              <Route path="/categories/beauty" element={<Beauty />} />
+              <Route path="/categories/places" element={<Places />} />
+              <Route path="/categories/lifestyle" element={<Lifestyle />} />
+              <Route path="/categories/decor" element={<Decor />} />
+              <Route path="/categories/press" element={<Press />} />
+             
             <Route path="/stories/:title" element={<SelectedStory />} />
             
             {/* Our area of focus  */}

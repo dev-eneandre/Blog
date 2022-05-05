@@ -1,12 +1,13 @@
 import { FacebookRounded, Instagram, MenuOutlined, Search, Twitter, YouTube } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
-import React, { useState } from  "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from  "react";
+import { Link, useNavigate } from "react-router-dom";
 import  "../Styles/Menu.css";
 import { db } from "../firebase";
 import { 
     collection,
     getDocs,
+    onSnapshot,
     query,
     where
 } from "firebase/firestore";
@@ -16,29 +17,38 @@ const Menu = () => {
 
     const [isActive, setActive] = useState(false);
     const [searchKey, setSearchKey] = useState("");
+    const [searchValue, setSearchValue] = useState([]);
+
+    let navigate = useNavigate();
 
     const toggler = () => {
         setActive(!isActive);
     }
 
-    const searchContent = async (e) => {
+    const searchContent = (e) => {
         
         e.preventDefault();
 
-        // alert(`search key is ${searchKey}`);
-        console.log(searchKey);
+        const colRefr = collection(db, "stories");
+    
+        const q = query(colRefr, where("title", "==", searchKey.toLowerCase()));
+        let search;
 
-        const storyRef = collection(db, "stories");
-        const q = query(storyRef, where("title", "==", searchKey));
-
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(searchKey);
-        console.log(doc.id, " == ", doc.data());
-        });
-
+        onSnapshot(q, (snapshot) => {
+          search = [];
+    
+          snapshot.docs.forEach((doc) => {
+            search.push({...doc.data(), id : doc.id })
+          })
+        
+        setSearchValue(search);
+        navigate(`/stories/${searchKey}`);
+     
+        setSearchValue("");
+         })    
         }
+
+
     return( 
         <div className="Nav">
            <div className="logo">
@@ -91,9 +101,14 @@ const Menu = () => {
                 </div>
             </div>
 
-            <form className="search__form">
-                <input className="search" type="text" placeholder="SEARCH" onChange={(e) =>( setSearchKey(e.target.value))}/>
-                <Search fontSize="medium" onClick={searchContent} />
+            <form className="search__form" onSubmit={searchContent}>
+                <input 
+                className="search" 
+                type="text" placeholder="SEARCH" 
+                onChange={(e) =>( setSearchKey(e.target.value))}/>
+                
+                <button style={{ border: "none", backgroundColor : "white"}}>
+                    <Search fontSize="small" /></button>
             </form>
 
             <div className="burger" onClick={toggler}>

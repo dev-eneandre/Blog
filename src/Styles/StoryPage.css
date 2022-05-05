@@ -1,0 +1,39 @@
+.sp{
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sp__date{
+    color : grey;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sp__headerImg{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 400px;
+}
+.sp__title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.sp__text{
+    padding-top: 15px;
+    text-indent: 15px;
+    font-size: 18px;
+    line-height: 2.2rem;
+}
+
+@media screen and (max-width : 768px){
+    .sp__title{
+        font-size: 15px;
+    }
+    .sp__text{
+        font-size: 14px;
+    }
+}

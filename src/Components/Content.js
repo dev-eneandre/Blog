@@ -30,7 +30,7 @@ function Content() {
     
     return (
       <div className="content__wrap">
-            <h4 className="cw__title">Casual - Looks</h4>
+            <h4 className="cw__title">Latest - Stories</h4>
             <div className="content">
             {
                 stories.map( (story, index) => (

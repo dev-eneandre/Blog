@@ -1,7 +1,7 @@
 import { Button, makeStyles, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import "../Styles/Contact.css";
-import { db } from "../firebase";
+import "../../Styles/Contact.css";
+import { db } from "../../firebase";
 import { 
     collection }
     from "firebase/firestore"
@@ -44,7 +44,7 @@ function Contact() {
             <div className="contact__ImgWrap">
                 <img
                     className="contact__Img" 
-                    src={require("../Images/Collaborate.jpg")} alt="profile Image" />
+                    src={require("../../Images/Collaborate.jpg")} alt="profile Image" />
             </div>
 
             <div className="contact__dets">

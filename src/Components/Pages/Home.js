@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
-import "../Styles/Home.css";
-import Categories from './Categories';
-import Content from './Content';
-import Subscribe from './Subscribe';
+import "../../Styles/Home.css";
+import Content from '../Content';
+import Subscribe from '../Subscribe';
 
 function Home() {
     const [ImgZoom, setImgZoom ] = useState(false);
 
     // Catalogue 
     const [ C__images, setC__images ] = useState([
-        { imgSrc : require("../Images/beauty+tile.png"), altt:"beauty tile" },
-        { imgSrc : require("../Images/decor+tile.png"), altt:"beauty tile" },
-        { imgSrc : require("../Images/fashion+tile.png"), altt:"beauty tile" },
-        { imgSrc : require("../Images/lifestyle+tile.png"), altt:"beauty tile" },
-        { imgSrc : require("../Images/places+tile.png"), altt:"beauty tile" }
+        { imgSrc : require("../../Images/beauty+tile.png"), altt:"beauty tile" },
+        { imgSrc : require("../../Images/decor+tile.png"), altt:"beauty tile" },
+        { imgSrc : require("../../Images/fashion+tile.png"), altt:"beauty tile" },
+        { imgSrc : require("../../Images/lifestyle+tile.png"), altt:"beauty tile" },
+        { imgSrc : require("../../Images/places+tile.png"), altt:"beauty tile" }
     ]);
 
-    const ChangeZoomState = (index) => {
-    
+    const ChangeZoomState = (index) => {    
         setImgZoom(!ImgZoom);
     }
 
     return (
         <div>
             {/* <Categories /> */}
-            
             <div className="HomeHeader">
+                {/* Image background  */}
             </div>
 
             {/* subscribe  */}

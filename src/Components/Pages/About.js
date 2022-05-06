@@ -1,7 +1,7 @@
 import React from 'react';
-import "../Styles/About.css";
-import Content from './Content';
-import Subscribe from './Subscribe';
+import "../../Styles/About.css";
+import Content from '../Content';
+import Subscribe from '../Subscribe';
 
 function About() {
     return (
@@ -41,7 +41,7 @@ function About() {
                     <div className="Abt__ImgWrap">
                         <img 
                             className="Abt__Img"
-                            src={require("../Images/Hayet8.jpg")}
+                            src={require("../../Images/Hayet8.jpg")}
                             alt="profile" />
                     </div>
                 </div>

@@ -1,21 +1,21 @@
 import './App.css';
-import Categories from './Components/Categories';
-import Home from './Components/Home';
+import Categories from './Components/Categories/Categories';
+import Home from './Components/Pages/Home';
 import Menu from './Components/Menu';
 
 import { BrowserRouter as Router, Routes, Route, Outlet, useParams } from "react-router-dom";
-import About from './Components/About';
-import Contact from './Components/Contact';
-import MyStories from './Components/MyStories';
-import Fashion from './Components/Fashion';
-import Beauty from './Components/Beauty';
-import Places from './Components/Places';
-import Lifestyle  from  './Components/Lifestyle';
-import Decor from './Components/Decor';
-import Press from './Components/Press';
+import About from './Components/Pages/About';
+import Contact from './Components/Pages/Contact';
+import MyStories from './Components/Pages/MyStories';
+import Fashion from './Components/Categories/Fashion';
+import Beauty from './Components/Categories/Beauty';
+import Places from './Components/Categories/Places';
+import Lifestyle  from  './Components/Categories/Lifestyle';
+import Decor from './Components/Categories/Decor';
+import Press from './Components/Categories/Press';
 import SelectedStory from './Components/SelectedStory';
 import ErrorPage from './Components/ErrorPage';
-import DifCategories from './Components/DifCategories';
+import DifCategories from './Components/Categories/DifCategories';
 
 
 function App() {

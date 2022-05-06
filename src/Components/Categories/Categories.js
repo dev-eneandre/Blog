@@ -1,8 +1,8 @@
 import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { db } from '../firebase';
-import "../Styles/Categories.css";
+import { db } from '../../firebase';
+import "../../Styles/Categories.css";
 
 function Categories() {
 
@@ -28,7 +28,7 @@ function Categories() {
     return (
         <div className="categ">
             <div className="categ__logo">
-                <img src={require("../Images/LOGO.png")} alt="logo" />
+                <img src={require("../../Images/LOGO.png")} alt="logo" />
             </div>
             <ul className="categ__list">
                 <li>

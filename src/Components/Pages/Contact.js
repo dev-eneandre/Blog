@@ -44,12 +44,12 @@ function Contact() {
             <div className="contact__ImgWrap">
                 <img
                     className="contact__Img" 
-                    src={require("../../Images/Collaborate.jpg")} alt="profile Image" />
-            </div>
+                    src={require("../../Images/white.jpg")} alt="profile Image" />
+            </div>  
 
             <div className="contact__dets">
                 {/* some text and a form  */}
-                <p>
+                <p className='contact__dets__text'>
                     thank you for thinking of me as a potential fit for
                     your brand. Please fill out the form below to be in
                     touch. If you have any questions about working together
@@ -126,9 +126,9 @@ function Contact() {
                         >
                             Send Message
                         </Button>
-                        <button onClick={sendMessage}>
+                        {/* <button onClick={sendMessage}>
                             send it/
-                        </button>
+                        </button> */}
                     
                     </div>
                 </form>

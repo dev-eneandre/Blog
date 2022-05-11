@@ -1,11 +1,47 @@
 .HomeHeader{
-    background-image: url("../Images/hayet+homepage+header.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 60vh;
+   position: relative;
 }   
+.HomeHeaderImg{
+    width: 100%;
+    object-fit: cover ;
+    object-position: center;
+}
+.Intro{
+    position: absolute;
+    top : 0;
+    left: 0;
 
+    
+    width: 100%;
+    height : 100%;
+    background : rgba(0, 0, 0, 0.2);
+    color : #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+}
+.Intro > * {
+    animation: IntroAnimation 3s ease-in-out 100ms ;
+}
+.Intro h3{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+.Intro h6{
+    font-size: 13px;
+    font-weight : 300;
+}
+@keyframes IntroAnimation{
+    from{
+        transform : translateX(-500px)
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 /* form  */
 .subscribe{
     min-height: 210px;
@@ -78,19 +114,58 @@
 .Cat__Catalogue{
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    padding: 25px 20px 45px;
+    padding: 5px 20px;
 }
 
 .catalogue__wrap{
     width: 20vw;
     cursor: pointer;
+
+    position: relative;
 }
 .catalogue__wrap img{
     width: 100%;
-    height: 100%;
+    height: 240px;
     object-fit: cover;
+
+    display : block;
 }
 
+.image__overlay{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height : 240px;
+    background : rgba(0, 0, 0, 0.6);
+    color : #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all ease-in-out 400ms;
+}
+.image__overlay > *{
+    transform : translateY(30px);
+    transition : transform 400ms;
+}
+.image__overlay:hover{
+    opacity: 1;
+}
+.image__overlay:hover > *{
+    transform:  translateY(0);
+}
+.image__title{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.image__description{
+    font-size: 10px;
+}
+.image__overlay__blur{
+    backdrop-filter: blur(5px);
+}
 /* zoom image out  */
 .zoomOut {
     position: absolute;
@@ -106,6 +181,7 @@
     /* } */
     .subscribe > p{
         font-size: 22px;
+        text-align: center;
     }   
     .subscribeForm > button, .subscribeForm > input{
         height: auto;
@@ -115,10 +191,19 @@
     .subscribeForm > button{
         font-size: 12px;
     }
+    .Cat__Catalogue{
+        display: none;
+    }
+    .Intro h3{
+        font-size: 30px;
+    }
+    .Intro h6{
+        font-size: 11px;
+    }
 }
 @media screen and (max-width : 400px){
     .subscribe > p{
-       font-size: 18px; 
+        font-size: 18px; 
     }
     .subscribeForm > button, .subscribeForm > input{
         height: auto;
@@ -129,4 +214,5 @@
     .subscribeForm > button{
         font-size: 11px;
     }
+    
 }

@@ -1,12 +1,11 @@
-import { FacebookRounded, Instagram, MenuOutlined, Search, Twitter, YouTube } from "@mui/icons-material";
+import {  MenuOutlined, Search } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
 import React, { useEffect, useState } from  "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import  "../Styles/Menu.css";
 import { db } from "../firebase";
 import { 
     collection,
-    getDocs,
     onSnapshot,
     query,
     where
@@ -48,57 +47,32 @@ const Menu = () => {
          })    
         }
 
+    const changePages = () => {
+          setActive(!isActive);
+    }
+
 
     return( 
         <div className="Nav">
+            {/* logo  */}
            <div className="logo">
-                <img  src={require("../Images/LOGO.png")} alt="logo"/>
+                <Link to="/"><img  src={require("../Images/LOGO.png")} alt="logo"/></Link>
            </div>
+           
+           {/* NavLinks  */}
             <div className={isActive ? "NavMenu nav-active" : "NavMenu"}>
-                    
-                   <div className="categ__wrapper">
-                        <ul className="menu__categ">
-                                <li><a href='#'>FASHION {'>'}</a>
-                                    <ul className='Ndropdown'>
-                                        <li>item 1</li>
-                                        <li>item 1</li>
-                                        <li>item 1</li>
-                                    </ul>
-                                </li>
-                                <li><a href='#'>BEAUTY{'>'} </a>
-                                <ul className='Ndropdown'>
-                                        <li>item 1</li>
-                                        <li>item 1</li>
-                                    </ul>
-                                </li>
-                                <li><a href='#'>PLACES</a> 
-                                </li>
-                                <li><a href='#'>LIFESTYLE</a> 
-                                </li>
-                                <li><a href='#'>DECOR</a> 
-                                </li>
-                                <li><a href='#'>PRESS</a></li>
-                        </ul>
-                   </div>
-                
-
-                <div className="Closeburger" onClick={toggler}>
+                    <div className="Closeburger" onClick={toggler}>
                     <CloseIcon />
                 </div>
 
                 <div className="Navlinks">
-                   <Link to="/" >Home</Link>
-                   <Link to="/stories" >Stories</Link>
-                   <Link to="/about" >About</Link>
-                   <Link to="/contact" >Contact</Link>
+                   <NavLink to="/"  onClick={changePages}>Home</NavLink>
+                   <NavLink to="/stories"  onClick={changePages} >Stories</NavLink>
+                   <NavLink to="/categories"  onClick={changePages}>Categories</NavLink>
+                   <NavLink to="/about"  onClick={changePages} >About</NavLink>
+                   <NavLink to="/contact"  onClick={changePages} >Contact</NavLink>
                  </div>
 
-                <div className="SocialMediaLinks">
-                    <FacebookRounded style = {{ color : "#66C5EB", fontSize:"20px", cursor:"pointer"}} />
-                    <Instagram style = {{ color : "#66C5EB", fontSize:"20px", cursor:"pointer" }} />
-                    <Twitter style = {{ color : "#66C5EB", fontSize:"20px", cursor:"pointer" }} />
-                    <YouTube style = {{ color : "#66C5EB", fontSize:"20px", cursor:"pointer" }} />
-                </div>
             </div>
 
             <form className="search__form" onSubmit={searchContent}>

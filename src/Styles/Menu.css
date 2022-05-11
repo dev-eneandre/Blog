@@ -1,15 +1,15 @@
 .Nav{
     background-color: #FCFCFC;
-    min-height: 6vh;
+    min-height: 9vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding-right : 20px;
     width: 100%;
     position: fixed;
+    z-index: 9999;
 }
 .logo{
-    display: none;
     cursor: pointer;
 }
 .NavMenu{
@@ -98,7 +98,6 @@
     list-style-type: none;
     padding : 0px 20px;
     cursor : pointer;
-
     position: relative;
 }
 .menu__categ li a{
@@ -106,30 +105,17 @@
     padding: 10px 20px;
     transition: all 3s ease;
 }
-.Ndropdown{
-    position: absolute;
-    top : 0;
-    left : 7rem;
-    width: 100px;
-    background-color: white;
-    
-    display: none;
-    z-index: 9999;
-}
-.Ndropdown li:hover{
-    color: #333;
-    background-color: rgb(252, 252, 252);
-}
-.Ndropdown li{
-    width: 100%;
-    padding: 5px 25px;
-    
+.menu__categ li a:active{
+    color : red;
 }
 .menu__categ li:hover > .Ndropdown{
     display: initial;
     
     transition: all 3s ease;
 
+}
+.active-link{
+    color : red !important;
 }
 
 

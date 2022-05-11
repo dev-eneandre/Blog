@@ -1,5 +1,4 @@
 import './App.css';
-import Categories from './Components/Categories/Categories';
 import Home from './Components/Pages/Home';
 import Menu from './Components/Menu';
 
@@ -23,7 +22,6 @@ function App() {
   return (
     <Router>
         <Menu />
-        <Categories />
  
         <Routes>
 

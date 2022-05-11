@@ -1,12 +1,11 @@
 .hr__contact{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    min-height: 100vh;
 }
 .contact__ImgWrap{
-    padding: 0px 30px;
-    box-shadow: 5px 5px 4px #888;
     cursor: pointer;
     width: 400px;
     height: auto;
@@ -18,7 +17,6 @@
 
 .contact__dets{ 
     width: 500px;
-    padding: 10px 35px;
 }
 .contact__dets p{
     font-family: Oranienbaum;
@@ -30,6 +28,11 @@
     text-transform: none;
     color: #050000;
     padding-top: 15px;
+    
+}
+.contact__dets__text{
+    margin-top: 25px;
+
 }
 .contact__form{
     margin-top: 30px;

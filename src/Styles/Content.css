@@ -1,6 +1,9 @@
 .content__wrap{
     /* width: 100%; */
 }
+.hr__contact{
+    padding: 20px;
+}
 .content__wrap .cw__title{
     text-align: center;
     padding-top: 30px;

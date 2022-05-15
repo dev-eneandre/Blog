@@ -83,7 +83,10 @@
     width: 300px;
 }
 .subscribeForm{
-    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 .subscribeForm > button, .subscribeForm > input{
     height: auto;

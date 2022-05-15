@@ -14,7 +14,7 @@ import Decor from './Components/Categories/Decor';
 import Press from './Components/Categories/Press';
 import SelectedStory from './Components/SelectedStory';
 import ErrorPage from './Components/ErrorPage';
-import DifCategories from './Components/Categories/DifCategories';
+import SearchedOutValue from './Components/SearchedOutValue';
 
 
 function App() {
@@ -35,9 +35,13 @@ function App() {
               <Route path="/categories/decor" element={<Decor />} />
               <Route path="/categories/press" element={<Press />} />
              
+
+             {/* searches based on title.... */}
             <Route path="/stories/:title" element={<SelectedStory />} />
             
             {/* Our area of focus  */}
+            <Route path="/search/:searchkey" element={<SearchedOutValue />} />
+          
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<ErrorPage />} />

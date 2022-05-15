@@ -37,6 +37,8 @@ function Subscribe() {
             }else{
                 console.log("value exissts");
             }
+
+            setinputedEmail("");
         })
       
     }

@@ -25,26 +25,11 @@ const Menu = () => {
     }
 
     const searchContent = (e) => {
-        
         e.preventDefault();
 
-        const colRefr = collection(db, "stories");
-    
-        const q = query(colRefr, where("title", "==", searchKey.toLowerCase()));
-        let search;
 
-        onSnapshot(q, (snapshot) => {
-          search = [];
-    
-          snapshot.docs.forEach((doc) => {
-            search.push({...doc.data(), id : doc.id })
-          })
-        
-        setSearchValue(search);
-        navigate(`/stories/${searchKey}`);
-     
-        setSearchValue("");
-         })    
+     console.log("heyy");
+             
         }
 
     const changePages = () => {
@@ -79,10 +64,13 @@ const Menu = () => {
                 <input 
                 className="search" 
                 type="text" placeholder="SEARCH" 
+                value={searchKey}
                 onChange={(e) =>( setSearchKey(e.target.value))}/>
                 
+                <Link to={`search/${searchKey}`}>
                 <button style={{ border: "none", backgroundColor : "white"}}>
                     <Search fontSize="small" /></button>
+                </Link>
             </form>
 
             <div className="burger" onClick={toggler}>

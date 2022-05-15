@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { db } from "../firebase";
 import StoryPage from './StoryPage';
 
+// seleced story for cards 
 function SelectedStory() {
 
   const [ curRead, setCurRead ] = useState([]);

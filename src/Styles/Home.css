@@ -1,5 +1,6 @@
 .HomeHeader{
    position: relative;
+   padding-top : 40px;
 }   
 .HomeHeaderImg{
     width: 100%;
@@ -187,7 +188,8 @@
         text-align: center;
     }   
     .subscribeForm > button, .subscribeForm > input{
-        height: auto;
+        height: 30px;
+        width: 100%;
         padding: 0.6em 1.5em;
         margin-top : 8px;
     }

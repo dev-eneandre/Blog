@@ -38,8 +38,8 @@
 .sc__img img{
     width: 100%;
     height : 400px;
-    /* object-fit: cover;
-    object-position: center; */
+    object-fit: cover;
+    object-position: center;
 }
 .st__date{
     color: #777777;

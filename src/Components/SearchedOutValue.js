@@ -16,7 +16,7 @@ function SearchedOutValue() {
   const dVal = { searchkey };
 
   useEffect(() =>{
-    console.log(dVal);
+    // console.log(dVal);
 
     const colRef = collection(db, "stories");
 
@@ -28,7 +28,7 @@ function SearchedOutValue() {
       snapshot.docs.forEach((doc) => {
         story.push({...doc.data(), id : doc.id})
       })
-      console.log(story);
+      // console.log(story);
       setSearchedValue(story);
     })
   }, [])

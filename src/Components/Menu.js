@@ -51,7 +51,7 @@ const Menu = () => {
                 <div className="Navlinks">
                    <NavLink to="/"  onClick={changePages}>Home</NavLink>
                    <NavLink to="/stories"  onClick={changePages} >Stories</NavLink>
-                   <NavLink to="/categories"  onClick={changePages}>Categories</NavLink>
+                   {/* <NavLink to="/categories"  onClick={changePages}>Categories</NavLink> */}
                    <NavLink to="/about"  onClick={changePages} >About</NavLink>
                    <NavLink to="/contact"  onClick={changePages} >Contact</NavLink>
                  </div>

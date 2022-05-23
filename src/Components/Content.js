@@ -10,6 +10,7 @@ import {
 function Content() {
     // a temporary  storage for details gotten on the db 
     const [stories, setStories ] =  useState([]);
+    
 
     useEffect(() => {
         const colRef = collection(db, "stories");
@@ -21,7 +22,12 @@ function Content() {
                     articles.push({...doc.data(), id : doc.id })
                 })
                 
-                setStories(articles);
+                let newList = articles
+                .sort(() => Math.random() - 0.5)
+                .filter((item, index) => index < 6);
+
+                // console.log(newList);    
+                setStories(newList);
 
             })
             .catch(err => {

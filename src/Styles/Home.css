@@ -45,7 +45,7 @@
 }
 /* form  */
 .subscribe{
-    min-height: 210px;
+    min-height: 230px;
     font-family: Oranienbaum;
 
     padding:  25px 20px;
@@ -83,12 +83,7 @@
     text-transform: capitalize;
     width: 300px;
 }
-.subscribeForm{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-}
 .subscribeForm > button, .subscribeForm > input{
     height: auto;
     padding: 1em 2.5em;
@@ -112,6 +107,22 @@
 .subscribeForm > input::placeholder{
     font-size: 11px;
     letter-spacing : 1.1px;
+}
+
+.warning__true, .success__true{
+    display : block;
+    color : rgb(228, 43, 43);
+    font-size: 14px;
+    text-align: center;
+}
+.success__true{
+    color : rgb(18, 241, 18);
+}
+
+.warning__false, .success__false{
+    text-align: center;
+    display: none;
+    
 }
 
 /* catalogue   */
@@ -188,7 +199,7 @@
         text-align: center;
     }   
     .subscribeForm > button, .subscribeForm > input{
-        height: 30px;
+        height: 40px;
         width: 100%;
         padding: 0.6em 1.5em;
         margin-top : 8px;

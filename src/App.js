@@ -39,8 +39,9 @@ function App() {
              {/* searches based on title.... */}
             <Route path="/stories/:title" element={<SelectedStory />} />
             
-            {/* Our area of focus  */}
+            
             <Route path="/search/:searchkey" element={<SearchedOutValue />} />
+            <Route path="/search/*" element={<ErrorPage />} />
           
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />

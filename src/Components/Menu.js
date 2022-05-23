@@ -25,10 +25,8 @@ const Menu = () => {
     }
 
     const searchContent = (e) => {
-        // e.preventDefault();
 
-
-    //  console.log("heyy");
+        setSearchKey("");
              
         }
 
@@ -67,8 +65,8 @@ const Menu = () => {
                 value={searchKey}
                 onChange={(e) =>( setSearchKey(e.target.value))}/>
                 
-                <Link to={`search/${searchKey.toLowerCase()}`}>
-                <button style={{ border: "none", backgroundColor : "white"}}>
+                <Link to={`search/${searchKey.toLowerCase()}`} >
+                <button style={{ border: "none", backgroundColor : "white"}} onClick={searchContent}>
                     <Search fontSize="small" /></button>
                 </Link>
             </form>

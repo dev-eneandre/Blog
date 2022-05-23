@@ -10,47 +10,69 @@ function Subscribe() {
     
     const [inputedEmail, setinputedEmail] = useState("");
     const [user, setUser] = useState([]);
+    const [ warningText, setWarningText ] = useState(false);
+    const [ successText, setSuccessText ] = useState(false);
     
+
+    const defaultPromptSettings = () => {
+        setWarningText(false);
+        setSuccessText(false);
+    }
 
     
     const handleSubmit = (e) => {
         e.preventDefault();
-      
+
+
         const colRef = collection(db, "subscribelist");
-
-        const q = query(colRef, where("email", "==", inputedEmail));
-        let users;
-        onSnapshot(q, (snapshot) => {
-            users = [];
-
-            snapshot.docs.forEach((doc) =>{
-                users.push({...doc.data(), id : doc.id})
-            })
-            console.log(users);
-//  TO BE updateDoc, LET THERE BE A WARNING TEXT 
-            if(users.length < 1){
-                console.log("less than 1...means zero ...means does not exist..means add values")
-                addDoc(collection(db, "subscribelist"), {
-                    email : inputedEmail
+            
+        getDocs(colRef)
+        .then((snapshot) => {
+            let subscribedUsers = [];
+                snapshot.docs.forEach((doc) => {
+                    subscribedUsers.push({...doc.data(), id : doc.id })
                 })
-       
-            }else{
-                console.log("value exissts");
-            }
 
+
+              const hasInputedValue = subscribedUsers.some((subscribed) => {
+                    return subscribed.emails === inputedEmail
+                })
+                
+         
+                if(hasInputedValue === true) {
+                    setWarningText(true);
+
+                }else{
+                    addDoc(collection(db, "subscribelist"), {
+                        emails : inputedEmail
+                    })
+                    setSuccessText(true);
+                }
+            }) 
+
+            // set defaults 
             setinputedEmail("");
-        })
+            setTimeout(defaultPromptSettings, 8000);
+            
       
     }
 
     return (
+        <div className='subscribe__wrapper'>
         <form className="subscribeForm" onSubmit={handleSubmit}> 
             <input  type="text" placeholder="Email Address"
                 onChange={(e) => setinputedEmail(e.target.value) }
                 value={inputedEmail}
             />
             <button>SUBSCRIBE</button>
-        </form>
+           
+          <div>
+                <p className={ warningText ? "warning__true" : " warning__false"}>email already subscribed</p>
+                <p className={ successText ? "success__true" : "success__false"}>successfully subscribed </p>
+        
+            </div>
+          </form>
+        </div>
     )
 }
 

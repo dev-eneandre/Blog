@@ -1,6 +1,4 @@
-.content__wrap{
-    /* width: 100%; */
-}
+
 .hr__contact{
     padding: 20px;
 }
@@ -59,5 +57,17 @@
     text-align: center;
     text-transform: uppercase;
     width: 250px;
+    padding-top : 9px;
 
+}
+@media screen and (max-width : 768px){
+    .story__card{
+        height: 400px;
+    }
+    .sc__img img{
+        width: 100%;
+        height : 350px;
+        object-fit: cover;
+        object-position: center;
+    }
 }

@@ -9,19 +9,23 @@ function About() {
                 <div className="hr__section2">
                     <div className="section2">
                     <p className="hr__text">
-                            Lets be honest, I started this blog as an excuse to keep posting pictures of
-                            myself. Yes, there is truth in that, but thats not all. Many people know me 
-                            from the hashtag #hayetisonadiet (too late, don't search for it). After a long
-                            journey battling with weight-loss and weight-gain and then one more round of
-                            weight-loss I realized that life wasn't just about dieting. I woke up one day
-                            and realized that a few years ago I was praying to have the job I have now, the
-                            life I have now and most importantly I was praying to have the body I have now.
-                            So I am taking a pause. A pause to celebrate the woman that I am now, and live 
-                            every inch of it.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac est condimentum, molestie erat quis, consectetur enim.
+                     Etiam mattis tellus augue, eu fringilla nisl sollicitudin condimentum. Nulla libero velit, lacinia sit amet ipsum at,
+                      aliquet iaculis ipsum. Quisque elementum massa ligula, a iaculis nisi imperdiet in. Fusce suscipit sed mi ut ornare.
+                       Phasellus pulvinar nunc eget urna vehicula, ac ultricies nibh placerat. Nam fringilla urna vel metus placerat,
+                        vehicula facilisis nunc auctor. Donec bibendum lectus luctus, fringilla lectus tristique, aliquet eros. Nam
+                         pretium scelerisque risus, eget maximus mauris. Praesent ipsum nibh, varius eget ex eget, volutpat eleifend
+                         arcu. Nulla id aliquet nunc. Sed iaculis ornare urna at luctus. Aliquam et vulputate magna. Mauris a eros eget
+                         elit tincidunt convallis. Ut sed elit feugiat, rhoncus odio id, finibus arcu. Proin in lectus vulputate, rutrum
+                         erat et, pharetra massa. Nunc faucibus lacus at consequat laoreet. Nunc consequat sem et lorem varius ullamcorper. 
                     </p>
                     <p className="hr__text">
-                        Just remember one thing... everything I share is a personal story or an
-                        experience, so technically you cannot really argue with my feelings!
+                       
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac est condimentum, molestie erat quis, consectetur enim.
+                     Etiam mattis tellus augue, eu fringilla nisl sollicitudin condimentum. Nulla libero velit, lacinia sit amet ipsum at,
+                      aliquet iaculis ipsum. Quisque elementum massa ligula, a iaculis nisi imperdiet in. Fusce suscipit sed mi ut ornare.
+                       Phasellus pulvinar nunc eget urna vehicula, ac ultricies nibh placerat. Nam fringilla urna vel metus placerat,
+                        vehicula facilisis nunc auctor. Donec bibendum lectus luctus, fringilla lectus tristique, aliquet eros.
                     </p>
                     <p className="hr__text">
                         xoxo!
@@ -37,12 +41,12 @@ function About() {
                 <div className="whats">
                     <h5 className="hr__title">WHAT I AM GOING TO POST ON THE BLOG...</h5>
                     <p className="hr__text">
-                            I don't know if you have ever met me, but I am very unpredictable and I 
-                            want the blog to be just about that. But okay I will say that there will
-                            be lots of fashion. The best part about a healthier life is that you get
-                            to stop spending money on medical bills and more money on clothing :-)
-                            When I feel like cooking I might just post that too, as well as a healthy
-                            dose of my unapologetic opinion about issues that girls like me face.
+                          
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac est condimentum, molestie erat quis, consectetur enim.
+                     Etiam mattis tellus augue, eu fringilla nisl sollicitudin condimentum. Nulla libero velit, lacinia sit amet ipsum at,
+                      aliquet iaculis ipsum. Quisque elementum massa ligula, a iaculis nisi imperdiet in. Fusce suscipit sed mi ut ornare.
+                       Phasellus pulvinar nunc eget urna vehicula, ac ultricies nibh placerat. Nam fringilla urna vel metus placerat,
+                        vehicula facilisis nunc auctor. Donec bibendum lectus luctus, fringilla lectus tristique, aliquet eros.
                     </p>
                 </div>
                

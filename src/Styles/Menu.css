@@ -130,7 +130,7 @@
 
 @media screen and (max-width : 768px){
     .logo{
-        padding-left: 1px;
+        padding-left: 1 px;
     }
     .Nav{
         display: flex;

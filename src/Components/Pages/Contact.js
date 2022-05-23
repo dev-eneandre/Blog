@@ -17,7 +17,7 @@ function Contact() {
     const sendMessage = (e) => {
         e.preventDefault();
 
-        alert("hey i'm human");
+        alert("to be fixed");
         // const colRef = collection(db, "userMessages");
 
         db.collection( "userMessages").add({
@@ -51,12 +51,11 @@ function Contact() {
                 {/* some text and a form  */}
                 <p className='contact__dets__text'>
                     thank you for thinking of me as a potential fit for
-                    your brand. Please fill out the form below to be in
-                    touch. If you have any questions about working together
-                    kindly review my blog policy. page (here). This will give
-                    you all you need to know about my collaboration approach,
-                    gifting and feature policies.
-                </p>
+                  
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac est condimentum, molestie erat quis, consectetur enim.
+                     Etiam mattis tellus augue, eu fringilla nisl sollicitudin condimentum. Nulla libero velit, lacinia sit amet ipsum at,
+                      aliquet iaculis ipsum. Quisque elementum massa ligula, a iaculis nisi imperdiet in. Fusce suscipit sed mi ut ornare.
+             </p>
                 <p>
                     THank you, and I look forward to connecting soon!
                 </p>

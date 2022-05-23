@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import "../Styles/Content.css";
 import Card from "./Card";
@@ -25,8 +26,7 @@ function Content() {
                 let newList = articles
                 .sort(() => Math.random() - 0.5)
                 .filter((item, index) => index < 6);
-
-                // console.log(newList);    
+  
                 setStories(newList);
 
             })
